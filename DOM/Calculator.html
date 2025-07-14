@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Calculator (Static)</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+    .calculator {
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+      padding: 30px 25px;
+      width: 320px;
+    }
+    .display {
+      background: #22223b;
+      color: #f2e9e4;
+      border-radius: 12px;
+      font-size: 2rem;
+      text-align: right;
+      padding: 18px 12px;
+      margin-bottom: 20px;
+      min-height: 48px;
+      letter-spacing: 1px;
+      overflow-x: auto;
+      user-select: none;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .btn {
+      background: #f2e9e4;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.3rem;
+      padding: 18px 0;
+      cursor: not-allowed;
+      box-shadow: 0 2px 5px rgba(44, 62, 80, 0.07);
+      transition: background 0.2s, color 0.2s, transform 0.1s;
+      color: #22223b;
+      outline: none;
+    }
+    .btn.operator {
+      background: #9a8c98;
+      color: #fff;
+    }
+    .btn.equal {
+      background: #22223b;
+      color: #f2e9e4;
+      grid-column: span 2;
+    }
+    .btn.clear {
+      background: #e07a5f;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display"></div>
+    <div class="buttons">
+      <button class="btn clear">C</button>
+      <button class="btn">(</button>
+      <button class="btn">)</button>
+      <button class="btn operator">÷</button>
+      <button class="btn">7</button>
+      <button class="btn">8</button>
+      <button class="btn">9</button>
+      <button class="btn operator">×</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+      <button class="btn">6</button>
+      <button class="btn operator">−</button>
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn operator">+</button>
+      <button class="btn">0</button>
+      <button class="btn">.</button>
+      <button class="btn equal">=</button>
+    </div>
+  </div>
+</body>
+</html>
+
