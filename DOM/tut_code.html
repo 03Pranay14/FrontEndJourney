@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <meta name="description" content="Describe your page here">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+
+    <input oninput="debouncepopulateDiv()" type="text" placeholder="First Num" id="first"></input><br><br>
+    <input oninput="debouncepopulateDiv()" type="text" placeholder="Second Num" id="second"></input><br><br>
+    
+    <div id="finalSum"></div>
+
+      <script>
+        let timeout;
+        function debouncepopulateDiv(){
+          timeout = setTimeout(()=>{
+            clearTimeout(timeout);
+            populateDiv();
+          },1000);
+          
+
+        }
+    function populateDiv(){
+        let a = document.getElementById("first").value;
+        let b = document.getElementById("second").value;
+        const element = document.getElementById("finalSum")
+        element.innerHTML= parseInt(a)+parseInt(b)
+    }
+  </script>
+</body>
+</html>
