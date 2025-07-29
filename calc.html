@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="calc">
+    <div id="content">
+      <form name="cal">
+        <div id="output">
+          <input type="text" name="display" id="display" readonly>
+        </div>
+        <div>
+          <input type="button" value="7" onclick="addToDisplay('7')">
+          <input type="button" value="8" onclick="addToDisplay('8')">
+          <input type="button" value="9" onclick="addToDisplay('9')">
+          <input type="button" value="/" onclick="addToDisplay('/')">
+        </div>
+        <div>
+          <input type="button" value="4" onclick="addToDisplay('4')">
+          <input type="button" value="5" onclick="addToDisplay('5')">
+          <input type="button" value="6" onclick="addToDisplay('6')">
+          <input type="button" value="*" onclick="addToDisplay('*')">
+        </div>
+        <div>
+          <input type="button" value="1" onclick="addToDisplay('1')">
+          <input type="button" value="2" onclick="addToDisplay('2')">
+          <input type="button" value="3" onclick="addToDisplay('3')">
+          <input type="button" value="-" onclick="addToDisplay('-')">
+        </div>
+        <div>
+          <input type="button" value="0" onclick="addToDisplay('0')">
+          <input type="button" value="." onclick="addToDisplay('.')">
+          <input type="button" value="C" onclick="clearDisplay()" id="clear">
+          <input type="button" value="+" onclick="addToDisplay('+')">
+        </div>
+        <div>
+          <input type="button" value="=" onclick="calculate()" id="res" style="width:100%">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
